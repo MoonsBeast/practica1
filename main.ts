@@ -23,8 +23,6 @@ export function solve(arr: Array<any>): (number | undefined)[]{
 
     try {
 
-        if ((typeof arr).includes("boolean")) throw "Boolean not accepted"
-
         const normalized = normalize(arr)
 
         return normalized.map((_, index) => {
