@@ -2,7 +2,7 @@ const arr = [[1, [2, ["3", 4]]],"5"]
 
 function normalize<T>(arr: Array<T>) : (number | undefined)[]{
 
-    const flatted = arr.flat(Number.MAX_VALUE) as (number | string)[]
+    const flatted = arr.flat(Number.MAX_VALUE)
     return flatted.map(elem => { 
 
         if (typeof elem === "string") return parseInt(elem) 
