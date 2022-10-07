@@ -24,4 +24,6 @@ export function solve<T>(arr: Array<T>): (number | undefined)[]{
 
 }
 
-console.log(solve(arr))
+if(import.meta.main){
+    console.log(solve(arr))
+}
