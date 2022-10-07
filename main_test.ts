@@ -9,6 +9,10 @@ Deno.test(function allNumber() {
   assertEquals(solve([1, 2, 3]), [6, 3, 2]);
 });
 
+Deno.test(function someBoolean() {
+  assertEquals(solve([1, true, 3]), [NaN, 3, NaN]);
+});
+
 Deno.test(function tuttiFrutti() {
   assertEquals(solve(["1", 2, "3"]), [6, 3, 2]);
 });

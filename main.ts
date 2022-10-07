@@ -1,7 +1,7 @@
 const arr = [[1, [2, ["3", 4]]],"5"]
 
-function normalize<T>(arr: Array<T>) : (number | undefined)[]{
-
+function normalize(arr: Array<any>) : (number | undefined)[]{
+    
     const flatted = arr.flat(Number.MAX_VALUE)
     return flatted.map(elem => { 
 
@@ -12,7 +12,9 @@ function normalize<T>(arr: Array<T>) : (number | undefined)[]{
 
 }
 
-export function solve<T>(arr: Array<T>): (number | undefined)[]{
+export function solve(arr: Array<any>): (number | undefined)[]{
+
+    if((typeof arr).includes("boolean")) throw "Boolean not accepted"
 
     const normalized = normalize(arr)
     
